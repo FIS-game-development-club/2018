@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 546827351}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 6.85, y: 1.27, z: 5.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 912393950}
   - component: {fileID: 912393949}
   - component: {fileID: 912393953}
+  - component: {fileID: 912393954}
   m_Layer: 0
   m_Name: CubePlayer
   m_TagString: Untagged
@@ -255,7 +256,7 @@ Transform:
   m_Children:
   - {fileID: 1684804370}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &912393953
 Rigidbody:
@@ -272,6 +273,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &912393954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 912393948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f77acf1a1ba834e81bf9692e0b29254c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1235607628
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +295,7 @@ GameObject:
   - component: {fileID: 1235607632}
   - component: {fileID: 1235607631}
   - component: {fileID: 1235607630}
+  - component: {fileID: 1235607633}
   m_Layer: 0
   m_Name: Walkway (1)
   m_TagString: Untagged
@@ -354,6 +367,38 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1235607628}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &1235607633
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1235607628}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1330143964 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 4c11110663a214aedaafef110f0cefdf, type: 3}
+  m_PrefabInternal: {fileID: 1339200431}
+--- !u!64 &1330143968
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1330143964}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 4c11110663a214aedaafef110f0cefdf, type: 3}
 --- !u!1001 &1339200431
 Prefab:
   m_ObjectHideFlags: 0
@@ -520,6 +565,7 @@ GameObject:
   - component: {fileID: 1869660009}
   - component: {fileID: 1869660008}
   - component: {fileID: 1869660007}
+  - component: {fileID: 1869660010}
   m_Layer: 0
   m_Name: Walkway (2)
   m_TagString: Untagged
@@ -590,6 +636,20 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1869660005}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &1869660010
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1869660005}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1892695811
 GameObject:
@@ -674,5 +734,5 @@ Transform:
   - {fileID: 1235607629}
   - {fileID: 1869660006}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
