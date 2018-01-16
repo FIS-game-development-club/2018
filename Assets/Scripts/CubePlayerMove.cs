@@ -4,43 +4,44 @@ using UnityEngine;
 
 public class CubePlayerMove : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	void Update () {
-		if (Input.GetKey(KeyCode.W))
-		{
-			gameObject.transform.Translate (Vector3.forward * Time.deltaTime * 5);
-		}
+    public float speed;
+    Rigidbody r;
+    bool onGround = true;
 
-		if (Input.GetKey(KeyCode.A))
-		{
-			gameObject.transform.Translate (Vector3.left * Time.deltaTime * 5);
-		}
+    void Start ()
+    {
+        r = gameObject.GetComponent<Rigidbody> ();
+    }
 
-		if (Input.GetKey(KeyCode.S))
-		{
-			gameObject.transform.Translate (Vector3.back * Time.deltaTime * 5);
-		}
+    void Update ()
+    {
+        if (Input.GetKey(KeyCode.D))
+        {
+                gameObject.transform.Translate(speed * Time.deltaTime, 0, 0);
+        
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            gameObject.transform.Translate(-speed * Time.deltaTime, 0, 0);
 
-		if (Input.GetKey(KeyCode.D))
-		{
-			gameObject.transform.Translate (Vector3.right * Time.deltaTime * 5);
-		}
+        }
+        if (Input.GetKey (KeyCode.Space) && onGround)
+        {
+            r.AddForce (new Vector3 (0, 170, 0));
+            onGround = false;
+        }
+        if (Input.GetKey (KeyCode.W))
+        {
+            gameObject.transform.Translate (0, 0, 1.0f * speed * Time.deltaTime);
+        }
+        if (Input.GetKey (KeyCode.S))
+        {
+            gameObject.transform.Translate (0, 0, -1.0f * speed * Time.deltaTime);
+        }
+    }
 
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			gameObject.transform.Translate (Vector3.up * 2);
-		}
-
-		if (Input.GetKey (KeyCode.Q)) {
-			gameObject.transform.Rotate (Vector3.down);
-		}
-
-		if (Input.GetKey (KeyCode.E)) {
-			gameObject.transform.Rotate (Vector3.up);
-		}
-}
-
+    void OnCollisionEnter(Collision c)
+    {
+        onGround = true;
+    }
 }
