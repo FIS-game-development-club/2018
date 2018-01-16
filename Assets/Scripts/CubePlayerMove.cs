@@ -38,6 +38,13 @@ public class CubePlayerMove : MonoBehaviour {
         {
             gameObject.transform.Translate (0, 0, -1.0f * speed * Time.deltaTime);
         }
+        if (Input.GetKey (KeyCode.Q)) {
+			gameObject.transform.Rotate (Vector3.down);
+		}
+
+		if (Input.GetKey (KeyCode.E)) {
+			gameObject.transform.Rotate (Vector3.up);
+		}
     }
 
     void OnCollisionEnter(Collision c)
