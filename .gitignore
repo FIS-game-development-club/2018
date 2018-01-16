@@ -33,3 +33,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 .vscode/settings.json
+*.DS_Store
