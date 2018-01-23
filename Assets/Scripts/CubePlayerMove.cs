@@ -8,7 +8,7 @@ public class CubePlayerMove : MonoBehaviour {
 	public float jump;
     Rigidbody r;
 	bool waiting = false;
-	float wait = 0f;
+	public float wait = 0f;
 	public float jumpDelay = 0.1f;
 
     void Start ()
