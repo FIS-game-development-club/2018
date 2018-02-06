@@ -14,7 +14,6 @@ public class Spikes : MonoBehaviour
     void OnCollisionEnter(Collision collide)
 	{
         if (collide.gameObject.name == "CubePlayer") {
-			Debug.Log ("Player died");
             deathmenu.died();
 		}
 	

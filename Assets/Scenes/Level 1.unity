@@ -126,7 +126,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4695316075211762, guid: 421522f57a585483a8d068614f99973f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.38
+      value: 1.17
       objectReference: {fileID: 0}
     - target: {fileID: 4695316075211762, guid: 421522f57a585483a8d068614f99973f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -387,6 +387,16 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114836455232180114, guid: 273452561d0b44fd7a6df0e98169e7c9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 608801106}
+    - target: {fileID: 114836455232180114, guid: 273452561d0b44fd7a6df0e98169e7c9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: respawn
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 273452561d0b44fd7a6df0e98169e7c9, type: 2}
@@ -854,6 +864,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 514785997}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &608801106 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114563913189873346, guid: 51ea937175bff4d60b3e1f1fad43bc69,
+    type: 2}
+  m_PrefabInternal: {fileID: 746635340}
+  m_Script: {fileID: 11500000, guid: b152d80f1710f41718494fd905507440, type: 3}
 --- !u!1 &666537463
 GameObject:
   m_ObjectHideFlags: 0
