@@ -35,7 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4396148342292290}
   m_Layer: 0
-  m_Name: Moving spikes start down
+  m_Name: spikes down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
