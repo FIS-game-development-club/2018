@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Death_menu : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void respawnX = 0;
+    public void respawnY = 0;
+    public void respawnZ = 0;
+
+    public void died(){
+        
+    }
 }
