@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Spikes : MonoBehaviour 
 {
-    Pausemenu Pausemenu = GameObject.Find("SceneManager").GetComponent<Pausemenu> ();
+    Pausemenu pausemenu;
+
+    void Start()
+    {
+        pausemenu = GameObject.Find("SceneManager").GetComponent<Pausemenu>();
+    }
 
     void OnCollisionEnter(Collision collide)
 	{
         if (collide.gameObject.name == "CubePlayer") {
 			Debug.Log ("Player died");
-			Pausemenu.pause ();
+            pausemenu.pause ();
 		}
 	
 	}
