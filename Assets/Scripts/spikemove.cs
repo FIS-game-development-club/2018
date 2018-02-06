@@ -10,8 +10,8 @@ public class spikemove : MonoBehaviour
 	public GameObject down_position;
 	public float shift_speed;
 
-	public float time_elapsed;
-	bool isUp;
+	float time_elapsed;
+	public bool isUp;
 
 	void Update () 
 	{
