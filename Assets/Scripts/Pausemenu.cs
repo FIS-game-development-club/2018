@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Pausemenu : MonoBehaviour {
-	public static bool paused = false;
+	public bool paused = false;
 	public GameObject PauseMenu;
+    Deathmenu deathmenu; 
 
 	public void resume(){
 		PauseMenu.SetActive (false);
@@ -18,10 +19,11 @@ public class Pausemenu : MonoBehaviour {
 	}
 	void Start () {
 		PauseMenu.SetActive (false);
+        deathmenu = GameObject.Find("SceneManager").GetComponent<Deathmenu>();
 	}
 		
 		void Update () {
-		if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetKeyDown(KeyCode.Escape) && deathmenu.active == false) {
 			if(paused){
 				resume ();
 			}
