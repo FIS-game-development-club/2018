@@ -1689,6 +1689,41 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114233133107735658, guid: 273452561d0b44fd7a6df0e98169e7c9,
+        type: 2}
+      propertyPath: m_text
+      value: Game over!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114233133107735658, guid: 273452561d0b44fd7a6df0e98169e7c9,
+        type: 2}
+      propertyPath: m_fontSize
+      value: 52.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114233133107735658, guid: 273452561d0b44fd7a6df0e98169e7c9,
+        type: 2}
+      propertyPath: m_textInfo.characterCount
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114233133107735658, guid: 273452561d0b44fd7a6df0e98169e7c9,
+        type: 2}
+      propertyPath: m_textInfo.spaceCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114233133107735658, guid: 273452561d0b44fd7a6df0e98169e7c9,
+        type: 2}
+      propertyPath: m_textInfo.wordCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114233133107735658, guid: 273452561d0b44fd7a6df0e98169e7c9,
+        type: 2}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114233133107735658, guid: 273452561d0b44fd7a6df0e98169e7c9,
+        type: 2}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 273452561d0b44fd7a6df0e98169e7c9, type: 2}
   m_IsPrefabParent: 0
