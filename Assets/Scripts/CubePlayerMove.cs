@@ -54,12 +54,14 @@ public class CubePlayerMove : MonoBehaviour {
 
 	void OnTriggerEnter(Collider c)
 	{
+        if (c.gameObject.name == "Levelboundary") return;
 		colliders.Add (c);
 		waiting = true;
 	}
 
 	void OnTriggerExit(Collider c)
 	{
+        if (c.gameObject.name == "Levelboundary") return;
 		colliders.Remove (c);
 		if (colliders.Count == 0) 
 		{
