@@ -1,27 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pausemenu : MonoBehaviour 
 {
 	public bool paused = false;
-	public GameObject pause_menu;
+	public Canvas pause_menu;
     Deathmenu death_menu; 
 
 	public void resume(){
-		pause_menu.SetActive (false);
+		set_active(false);
 		Time.timeScale = 1;
 		paused = false;
 	}
 	public void pause (){
-		pause_menu.SetActive (true);
+		set_active(true);
 		Time.timeScale = 0;
 		paused = true;
 	}
 	void Start () {
-		pause_menu.SetActive (false);
+		set_active(false);
         death_menu = GameObject.Find("SceneManager").GetComponent<Deathmenu>();
 	}
+
+	public void set_active(bool b)
+    {
+        pause_menu.enabled = b;
+    }
 		
 	void Update () 
 	{
