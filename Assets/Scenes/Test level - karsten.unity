@@ -1889,10 +1889,14 @@ Prefab:
   m_IsPrefabParent: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!1001 &1491421334
 =======
 >>>>>>> parent of b3b657a... t
+=======
+--- !u!1001 &1491421334
+>>>>>>> parent of eea42a0... Merge branch 'master' into Exit/enter
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
