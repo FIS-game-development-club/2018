@@ -1888,8 +1888,11 @@ Prefab:
   m_ParentPrefab: {fileID: 100100000, guid: 07905e8bfb39c4858ab8fda44495277c, type: 2}
   m_IsPrefabParent: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!1001 &1491421334
+=======
+>>>>>>> parent of b3b657a... t
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1931,7 +1934,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 17dee5ed4e2b28b4a9273dbfec0286a7, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
 >>>>>>> parent of eea42a0... Merge branch 'master' into Exit/enter
+=======
+>>>>>>> parent of b3b657a... t
 --- !u!1 &1505419268
 GameObject:
   m_ObjectHideFlags: 0
