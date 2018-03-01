@@ -22,13 +22,14 @@ GameObject:
   - component: {fileID: 222949660656748890}
   - component: {fileID: 114110143778669970}
   - component: {fileID: 114836455232180114}
+  - component: {fileID: 114555853149093138}
   m_Layer: 5
   m_Name: Respawn Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1438756445975694
 GameObject:
   m_ObjectHideFlags: 0
@@ -47,7 +48,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1552287749397982
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,7 +66,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1669496707999948
 GameObject:
   m_ObjectHideFlags: 1
@@ -99,7 +100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1936195538974312
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1942364740229440
 GameObject:
   m_ObjectHideFlags: 1
@@ -643,6 +644,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114555853149093138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1056434232921918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae27bc9f88eaa4a42b3fd16fcbd97b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114594223426045776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -651,10 +663,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1438756445975694}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b94314894c2a437a87fd72f48376fa4, type: 3}
+  m_Script: {fileID: 11500000, guid: cb21136083730864497b4a1b6a2924f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: Main menu
+  scene: Scenes/Main menu
 --- !u!114 &114821073316537848
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -695,7 +707,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114594223426045776}
-        m_MethodName: Scenemanager
+        m_MethodName: to_scene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -746,8 +758,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: respawn
+      - m_Target: {fileID: 114555853149093138}
+        m_MethodName: on_click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

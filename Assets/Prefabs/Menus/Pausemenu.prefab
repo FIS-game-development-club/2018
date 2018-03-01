@@ -28,7 +28,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1468027181107826
 GameObject:
   m_ObjectHideFlags: 1
@@ -62,7 +62,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1568354370322056
 GameObject:
   m_ObjectHideFlags: 1
@@ -98,7 +98,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1745599769649192
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,13 +110,14 @@ GameObject:
   - component: {fileID: 222686967099450622}
   - component: {fileID: 114881206290831108}
   - component: {fileID: 114416451496218948}
+  - component: {fileID: 114088004445557236}
   m_Layer: 5
   m_Name: Resume Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1877246759316586
 GameObject:
   m_ObjectHideFlags: 1
@@ -152,7 +153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &114014745586424368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -317,6 +318,17 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &114088004445557236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1745599769649192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45109f51a90384d45a37a6a142475d8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114191599208682966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -437,10 +449,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1622160879360542}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b94314894c2a437a87fd72f48376fa4, type: 3}
+  m_Script: {fileID: 11500000, guid: cb21136083730864497b4a1b6a2924f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: Main menu
+  scene: Scenes/Main menu
 --- !u!114 &114279115999094310
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -528,8 +540,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: resume
+      - m_Target: {fileID: 114088004445557236}
+        m_MethodName: on_click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -747,7 +759,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114230131558216320}
-        m_MethodName: Scenemanager
+        m_MethodName: to_scene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
