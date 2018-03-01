@@ -11,6 +11,7 @@ public class Leveledge : MonoBehaviour {
     void OnTriggerExit(Collider c) {
         if (c.gameObject.name == "CubePlayer")
         {
+			Debug.Log (c);
             deathmenu.died();
         }
     }
