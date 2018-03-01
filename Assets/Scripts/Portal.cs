@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour {
     public string scene;
-    void OnCollisionEnter(Collision collide)
+    void OnTriggerExit(Collider c)
     {
-        if (collide.gameObject.name == "CubePlayer")
+        if (c.gameObject.name == "CubePlayer")
         {
             SceneManager.LoadScene(scene);
         }
