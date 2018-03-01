@@ -2,20 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spikes : MonoBehaviour 
-{
+public class Leveledge : MonoBehaviour {
     Deathmenu deathmenu;
 
-    void Start()
-    {
+    void Start() {
         deathmenu = GameObject.Find("SceneManager").GetComponent<Deathmenu>();
     }
-
-    void OnTriggerEnter(Collider c)
-	{
-        if (c.gameObject.name == "CubePlayer") {
+    void OnTriggerExit(Collider c) {
+        if (c.gameObject.name == "CubePlayer")
+        {
             deathmenu.died();
-		}
-	
-	}
+        }
+    }
 }
