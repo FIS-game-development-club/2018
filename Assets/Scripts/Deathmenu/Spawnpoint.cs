@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Respawnpoint : MonoBehaviour {
+public class Spawnpoint : MonoBehaviour {
 
-	// Use this for initialization
+    public GameObject Player;
+    public GameObject spawnpoint;
+
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+        spawnpoint = GameObject.Find("Spawnpoint");
+        Player = GameObject.Find("CubePlayer");
+        spawnpoint.transform.position = Player.transform.position;
+        spawnpoint.transform.rotation = Player.transform.rotation;
 	}
 }
