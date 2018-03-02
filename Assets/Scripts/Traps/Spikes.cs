@@ -11,9 +11,9 @@ public class Spikes : MonoBehaviour
         deathmenu = GameObject.Find("SceneManager").GetComponent<Deathmenu>();
     }
 
-    void OnTriggerEnter(Collider c)
+    void OnCollisionEnter(Collision collide)
 	{
-        if (c.gameObject.name == "CubePlayer") {
+        if (collide.gameObject.name == "CubePlayer") {
             deathmenu.died();
 		}
 	
