@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    public GameObject Player;
-    public GameObject spawnpoint;
-
+    GameObject spawnpoint;
+    bool usable = true;
+    Spawnpoint script;
     void Start()
     {
         spawnpoint = GameObject.Find("Spawnpoint");
-        Player = GameObject.Find("CubePlayer");
+        script = GameObject.Find("SceneManager").GetComponent<Spawnpoint>();
     }
     void OnTriggerEnter(Collider c)
     {
-        if (c.gameObject.name == "CubePlayer")
+        if (usable)
         {
-            spawnpoint.transform.rotation = Player.transform.rotation;
-            spawnpoint.transform.position = Player.transform.position;
+            if (c.gameObject.name == "CubePlayer")
+            {
+                script.setspawnpoint(gameObject);
+            }
         }
     }
 }
