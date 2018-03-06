@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Spawnpoint : MonoBehaviour {
 
-    public GameObject Player;
-    public GameObject spawnpoint;
+    GameObject Player;
+    GameObject spawnpoint;
 
 	void Start() {
         spawnpoint = GameObject.Find("Spawnpoint");
@@ -13,8 +13,9 @@ public class Spawnpoint : MonoBehaviour {
         setspawnpoint(Player);
 	}
 
-    public void setspawnpoint(GameObject Location){
+    public void setspawnpoint(GameObject Location)
+    {
         spawnpoint.transform.position = Location.transform.position;
-        spawnpoint.transform.position = Location.transform.position;
+        spawnpoint.transform.rotation = Location.transform.rotation;
     }
 }
