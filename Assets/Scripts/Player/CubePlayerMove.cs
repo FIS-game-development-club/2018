@@ -46,6 +46,7 @@ public class CubePlayerMove : MonoBehaviour {
 		if (Input.GetKey (KeyCode.Space) && wait >= jumpDelay)
 		{
 			wait = 0;
+			waiting = false;
 			r.AddForce (new Vector3 (0, jump, 0));
 		}
     }

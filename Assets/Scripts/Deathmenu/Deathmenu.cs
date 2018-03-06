@@ -9,12 +9,14 @@ public class Deathmenu : MonoBehaviour {
     GameObject player;
     GameObject spawn_point;
     Pausemenu pause_menu;
+    EventSystemScript event_system;
 
     void Start(){
         player = GameObject.Find("CubePlayer");
         spawn_point = GameObject.Find("Spawnpoint");
         set_active(false);
         pause_menu = GameObject.Find("SceneManager").GetComponent<Pausemenu>();
+        event_system = GameObject.Find("SceneManager").GetComponent<EventSystemScript>();
     }
 
     public void died(){
@@ -28,6 +30,7 @@ public class Deathmenu : MonoBehaviour {
         set_active(false);
         player.transform.position = spawn_point.transform.position;
         player.transform.rotation = spawn_point.transform.rotation;
+        event_system.clear_selection();
         Time.timeScale = 1;
         active = false;
     }
