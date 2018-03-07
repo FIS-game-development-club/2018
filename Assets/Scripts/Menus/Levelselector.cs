@@ -15,7 +15,9 @@ public class Levelselector : MonoBehaviour {
         Highscore = PlayerPrefs.GetInt("highscore " + levelnumber.ToString(), 0);
         highscore.text = "Highscore: " + Highscore.ToString();
     }
+
 	public void to_level () {
+    
         if (PlayerPrefs.GetInt("Levelnumber", 1) >= levelnumber)
         {
             SceneManager.LoadScene(level);
