@@ -11,7 +11,7 @@ public class Levelselector : MonoBehaviour {
     public Text highscore;
     int Highscore;
 
-    void Update(){
+    void FixedUpdate(){
         Highscore = PlayerPrefs.GetInt("highscore " + levelnumber.ToString(), 0);
         highscore.text = "Highscore: " + Highscore.ToString();
     }
