@@ -823,16 +823,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 114372533520944762, guid: 51ea937175bff4d60b3e1f1fad43bc69,
-        type: 2}
-      propertyPath: pause_menu
-      value: 
-      objectReference: {fileID: 1205322477}
     - target: {fileID: 114563913189873346, guid: 51ea937175bff4d60b3e1f1fad43bc69,
         type: 2}
       propertyPath: death_menu
       value: 
       objectReference: {fileID: 1767655281}
+    - target: {fileID: 114372533520944762, guid: 51ea937175bff4d60b3e1f1fad43bc69,
+        type: 2}
+      propertyPath: pause_menu
+      value: 
+      objectReference: {fileID: 1205322477}
+    - target: {fileID: 114506297740296760, guid: 51ea937175bff4d60b3e1f1fad43bc69,
+        type: 2}
+      propertyPath: highscore
+      value: 
+      objectReference: {fileID: 490449099}
+    - target: {fileID: 114506297740296760, guid: 51ea937175bff4d60b3e1f1fad43bc69,
+        type: 2}
+      propertyPath: time
+      value: 
+      objectReference: {fileID: 246293229}
+    - target: {fileID: 114506297740296760, guid: 51ea937175bff4d60b3e1f1fad43bc69,
+        type: 2}
+      propertyPath: levelnumber
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51ea937175bff4d60b3e1f1fad43bc69, type: 2}
   m_IsPrefabParent: 0
