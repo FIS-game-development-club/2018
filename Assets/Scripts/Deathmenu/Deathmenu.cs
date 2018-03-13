@@ -11,7 +11,9 @@ public class Deathmenu : MonoBehaviour {
     Pausemenu pause_menu;
     EventSystemScript event_system;
 
-    void Start(){
+    void Start()
+    {
+        //cache the player, spawnpoint and other important objects
         player = GameObject.Find("CubePlayer");
         spawn_point = GameObject.Find("Spawnpoint");
         set_active(false);
@@ -19,7 +21,8 @@ public class Deathmenu : MonoBehaviour {
         event_system = GameObject.Find("SceneManager").GetComponent<EventSystemScript>();
     }
 
-    public void died(){
+    public void died()
+    {
         set_active(true);
         active = true;
         Time.timeScale = 0;

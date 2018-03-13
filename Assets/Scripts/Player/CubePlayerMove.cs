@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CubePlayerMove : MonoBehaviour {
 
+	//set player properties
     public float speed;
 	public float jump;
     Rigidbody r;
@@ -13,13 +14,17 @@ public class CubePlayerMove : MonoBehaviour {
 
     void Start ()
     {
+		//store the rigidbody for later use
         r = gameObject.GetComponent<Rigidbody> ();
     }
 
     void FixedUpdate ()
     {
+		//keeps track of the time since the player started waiting
 		if (waiting)
 			wait += Time.deltaTime;
+
+		//player movement (only when key is pressed)
         if (Input.GetKey(KeyCode.D))
         {
             gameObject.transform.Translate(speed * Time.deltaTime, 0, 0);
@@ -43,6 +48,8 @@ public class CubePlayerMove : MonoBehaviour {
 		if (Input.GetKey (KeyCode.E)) {
 			gameObject.transform.Rotate (Vector3.up);
 		}
+
+		//only jump if the player has waited longer than jump delay
 		if (Input.GetKey (KeyCode.Space) && wait >= jumpDelay)
 		{
 			wait = 0;
@@ -55,12 +62,14 @@ public class CubePlayerMove : MonoBehaviour {
 
 	void OnTriggerEnter(Collider c)
 	{
+		//when the player lands start waiting
 		colliders.Add (c);
 		waiting = true;
 	}
 
 	void OnTriggerExit(Collider c)
 	{
+		//stop waiting and reset if the player falls
 		colliders.Remove (c);
 		if (colliders.Count == 0) 
 		{

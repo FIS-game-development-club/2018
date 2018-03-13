@@ -13,9 +13,10 @@ public class Spikes : MonoBehaviour
 
     void OnCollisionEnter(Collision collide)
 	{
-        if (collide.gameObject.name == "CubePlayer") {
+        //kill the player if they touch the spikes
+        if (collide.gameObject.name == "CubePlayer") 
+        {
             deathmenu.died();
 		}
-	
 	}
 }
