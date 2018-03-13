@@ -8,6 +8,8 @@ public class Leveledge : MonoBehaviour {
     void Start() {
         deathmenu = GameObject.Find("SceneManager").GetComponent<Deathmenu>();
     }
+
+    //kill the player if they leave the level
     void OnTriggerExit(Collider c) 
     {
         if (c.gameObject.name == "CubePlayer")

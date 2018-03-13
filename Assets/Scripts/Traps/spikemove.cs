@@ -15,7 +15,9 @@ public class spikemove : MonoBehaviour
 
 	void Update () 
 	{
+		//keep track of time
 		time_elapsed += Time.deltaTime;
+		//switch directions if nessesary
 		if (isUp) 
 		{
 			if (time_elapsed > time_up) 
@@ -33,6 +35,7 @@ public class spikemove : MonoBehaviour
 			}
 		}
 
+		//move up or down if nessesary
 		if (isUp) {
 			gameObject.transform.position = 
 				Vector3.Lerp (
