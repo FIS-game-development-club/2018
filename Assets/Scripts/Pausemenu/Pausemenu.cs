@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Pausemenu : MonoBehaviour 
 {
-	public bool paused = false;
-	public Canvas pause_menu;
+	bool paused = false;
+	Canvas pause_menu;
     Deathmenu death_menu; 
 	EventSystemScript event_system;
 
@@ -28,9 +28,10 @@ public class Pausemenu : MonoBehaviour
 	void Start ()
 	{
 		//cache the death menu and event system
-		set_active(false);
         death_menu = GameObject.Find("SceneManager").GetComponent<Deathmenu>();
 		event_system = GameObject.Find("SceneManager").GetComponent<EventSystemScript>();
+		pause_menu = GameObject.Find("Pausemenu").GetComponent<Canvas>();
+		set_active(false);
 	}
 
 	public void set_active(bool b)
@@ -41,7 +42,7 @@ public class Pausemenu : MonoBehaviour
 	void Update () 
 	{
 		//pause if the escape key is pressed
-        if (Input.GetKeyDown(KeyCode.Escape) && death_menu.active == false) 
+        if (Input.GetKeyDown(KeyCode.Escape) && death_menu.isActive() == false) 
 		{
 			if(paused)
 			{
@@ -51,5 +52,10 @@ public class Pausemenu : MonoBehaviour
 				pause();
 			}
 		}
+	}
+
+	public bool getPaused()
+	{
+		return paused;
 	}
 }
