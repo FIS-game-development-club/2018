@@ -28,8 +28,8 @@ public class Pausemenu : MonoBehaviour
 	void Start ()
 	{
 		//cache the death menu and event system
-        death_menu = GameObject.Find("SceneManager").GetComponent<Deathmenu>();
-		event_system = GameObject.Find("SceneManager").GetComponent<EventSystemScript>();
+        death_menu = gameObject.GetComponent<Deathmenu>();
+		event_system = gameObject.GetComponent<EventSystemScript>();
 		pause_menu = GameObject.Find("Pausemenu").GetComponent<Canvas>();
 		set_active(false);
 	}
