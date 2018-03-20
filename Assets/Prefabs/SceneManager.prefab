@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114563913189873346}
   - component: {fileID: 114326790913529626}
   - component: {fileID: 114037817472719148}
+  - component: {fileID: 114506297740296760}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -82,7 +83,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1278479180465862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.12939024, y: 0.84507436, z: 0.097504854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4102827692179786}
@@ -171,6 +172,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paused: 0
   pause_menu: {fileID: 0}
+--- !u!114 &114506297740296760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1278479180465862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdf1ddfec18ee4b7db0d758d4421ae3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelnumber: 0
+  highscore: {fileID: 0}
+  time: {fileID: 0}
+  score: 0
 --- !u!114 &114563913189873346
 MonoBehaviour:
   m_ObjectHideFlags: 1

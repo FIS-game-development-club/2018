@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Portal : MonoBehaviour {
     public string scene;
     public int Levelnumber;
+    public GameObject scenemanager;
     void OnTriggerEnter(Collider c)
     {
         if (c.gameObject.name == "CubePlayer")
