@@ -6,14 +6,22 @@ using UnityEngine.UI;
 public class Highscore : MonoBehaviour {
     public int levelnumber;
     public Text highscore;
-    int highscoreint;
     public Text time;
-    public int score;
+    public float score;
 
-    void FixedUpdate () {
-        highscoreint = PlayerPrefs.GetInt("highscore " + levelnumber.ToString(), 0);
-        highscore.text = "Highscore: " + highscoreint.ToString();
-        score = (int)Time.deltaTime;
-        time.text = score.ToString();
+	void Start()
+	{
+        highscore.text = "Highscore: " + PlayerPrefs.GetInt("highscore " + levelnumber.ToString(), 0);
+	}
+	void Update () {
+        score += Time.deltaTime;
+        if ((Mathf.Round(score * 10) / 10) % 1 == 0)
+        {
+            time.text = "Score: " + (Mathf.Round(score * 10) / 10) + ".0s";
+        }
+        else
+        {
+            time.text = "Score: " + (Mathf.Round(score * 10) / 10) + "s";
+        }
 	}
 }
