@@ -12,6 +12,7 @@ public class Checkpoint : MonoBehaviour
         script = GameObject.Find("SceneManager").GetComponent<Spawnpoint>();
     }
 
+    //sets the players spawnpoint to the checkpoint
     void OnTriggerEnter(Collider c)
     {
         if (c.gameObject.name == "CubePlayer")

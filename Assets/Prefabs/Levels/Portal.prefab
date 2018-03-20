@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Main menu
+  Levelnumber: 0
 --- !u!198 &198575992647144938
 ParticleSystem:
   m_ObjectHideFlags: 1

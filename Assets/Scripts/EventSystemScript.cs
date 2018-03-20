@@ -5,7 +5,12 @@ using UnityEngine;
 
 public class EventSystemScript : MonoBehaviour 
 {
-	public EventSystem event_system;
+	EventSystem event_system;
+
+	void Start()
+	{
+		event_system = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+	}
 
 	public void clear_selection()
 	{
