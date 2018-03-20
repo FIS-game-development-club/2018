@@ -11,7 +11,6 @@ public class Portal : MonoBehaviour {
     {
         if (c.gameObject.name == "CubePlayer")
         {
-            if()
             SceneManager.LoadScene(scene);
             if (PlayerPrefs.GetInt("Levelnumber", 1) >= Levelnumber){
                 PlayerPrefs.SetInt("Levelnumber", Levelnumber + 1);
