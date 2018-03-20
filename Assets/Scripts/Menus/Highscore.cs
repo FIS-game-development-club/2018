@@ -15,8 +15,7 @@ public class Highscore : MonoBehaviour {
 	}
 	void Update () {
         score += Time.deltaTime;
-        if ((Mathf.Round(score * 10) / 10) % 1 == 0)
-        {
+        if ((Mathf.Round(score * 10) / 10) % 1 == 0){
             time.text = "Score: " + (Mathf.Round(score * 10) / 10) + ".0s";
         }
         else
