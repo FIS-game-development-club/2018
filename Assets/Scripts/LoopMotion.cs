@@ -13,8 +13,6 @@ public class LoopMotion : MonoBehaviour
 	{
 		n = -1;
 		start_next();
-		gameObject.transform.position = nodes[0].transform.position;
-		gameObject.transform.rotation = nodes[0].transform.rotation;
 	}
 	
 	Vector3 a, b;
@@ -41,8 +39,8 @@ public class LoopMotion : MonoBehaviour
 	private void start_next()
 	{
 		n = (n + 1) % nodes.Count;
-		a = getNode(n + 1).transform.position;
-		b = getNode(n).transform.position;
+		a = getNode(n).transform.position;
+		b = getNode(n + 1).transform.position;
 		Vector3 d = b - a;
 		m = d.magnitude;
 		x -= delay * velocity;
