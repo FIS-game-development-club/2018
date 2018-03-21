@@ -20,7 +20,9 @@ public class Portal : MonoBehaviour {
             if (PlayerPrefs.GetInt("Levelnumber", 1) >= Levelnumber){
                 PlayerPrefs.SetInt("Levelnumber", Levelnumber + 1);
             }
-            Highscore.
+            if (score.score > PlayerPrefs.GetInt("highscore " + Levelnumber.ToString(), 0)){
+                PlayerPrefs.SetFloat((Mathf.Round(score.score * 10) / 10));
+            }
         }
     }
 }

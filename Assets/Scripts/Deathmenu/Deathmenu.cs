@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Deathmenu : MonoBehaviour 
 {
     Canvas death_menu;
-    bool active = false;
+    public bool active = false;
     GameObject player;
     GameObject spawn_point;
     Pausemenu pause_menu;

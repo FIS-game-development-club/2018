@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Pausemenu : MonoBehaviour 
 {
-	bool paused = false;
+	public bool paused = false;
 	Canvas pause_menu;
     Deathmenu death_menu; 
 	EventSystemScript event_system;
