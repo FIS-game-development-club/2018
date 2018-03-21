@@ -6,19 +6,18 @@ using UnityEngine.UI;
 
 public class Levelselector : MonoBehaviour {
 
-    public string level;
+    string level;
     public int levelnumber;
     public Text highscore;
-    int Highscore;
 
     void Start(){
-        Highscore = PlayerPrefs.GetInt("highscore " + levelnumber.ToString(), 0);
-        highscore.text = Highscore.ToString();
+        highscore.text = "Highscore: " + PlayerPrefs.GetFloat("highscore " + levelnumber, 0) + "s";
+        level = "Scenes/Level " + levelnumber;
     }
 
 	public void to_level () {
     
-        if (PlayerPrefs.GetInt("Levelnumber", 1) >= levelnumber)
+        if (PlayerPrefs.GetFloat("Levelnumber", 1) >= levelnumber)
         {
             SceneManager.LoadScene(level);
         }

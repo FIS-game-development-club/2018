@@ -9,12 +9,9 @@ public class Highscore : MonoBehaviour {
     public Text time;
     public float score;
 
-	void Start()
-	{
-        highscore.text = "Highscore: " + PlayerPrefs.GetInt("highscore " + levelnumber.ToString(), 0) + "s";
-	}
 	void Update () {
         score += Time.deltaTime;
+        highscore.text = "Highscore: " + PlayerPrefs.GetFloat("highscore " + levelnumber, 0) + "s";
         if ((Mathf.Round(score * 10) / 10) % 1 == 0){
             time.text = "Score: " + (Mathf.Round(score * 10) / 10) + ".0s";
         }

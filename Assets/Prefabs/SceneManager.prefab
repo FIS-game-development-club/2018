@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160d33154dcbc4b7da7d697a20a57965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paused: 0
 --- !u!114 &114506297740296760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -195,3 +196,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b152d80f1710f41718494fd905507440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
