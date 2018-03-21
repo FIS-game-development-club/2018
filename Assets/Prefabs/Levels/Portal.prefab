@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bdc6b27e9e51470fa5acad5c793c016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Main menu
+  scene: scenes/Level selector
   Levelnumber: 0
 --- !u!198 &198575992647144938
 ParticleSystem:
@@ -345,7 +345,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 22940699
+  randomSeed: 887097003
   InitialModule:
     serializedVersion: 3
     enabled: 1
