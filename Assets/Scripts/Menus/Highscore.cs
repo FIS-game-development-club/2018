@@ -11,7 +11,7 @@ public class Highscore : MonoBehaviour {
 
 	void Start()
 	{
-        highscore.text = "Highscore: " + PlayerPrefs.GetInt("highscore " + levelnumber.ToString(), 0);
+        highscore.text = "Highscore: " + PlayerPrefs.GetInt("highscore " + levelnumber.ToString(), 0) + "s";
 	}
 	void Update () {
         score += Time.deltaTime;

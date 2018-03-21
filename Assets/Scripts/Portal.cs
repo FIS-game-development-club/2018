@@ -4,10 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour {
-    public string scene;
+    public string scene = "scenes/Levelselector";
     public int Levelnumber;
-    public GameObject scenemanager;
-    void OnTriggerEnter(Collider c)
+    Highscore score;
+
+	void Start()
+	{
+        score = GameObject.Find("SceneManager").GetComponent<Highscore>();
+	}
+	void OnTriggerEnter(Collider c)
     {
         if (c.gameObject.name == "CubePlayer")
         {
@@ -15,6 +20,7 @@ public class Portal : MonoBehaviour {
             if (PlayerPrefs.GetInt("Levelnumber", 1) >= Levelnumber){
                 PlayerPrefs.SetInt("Levelnumber", Levelnumber + 1);
             }
+            Highscore.
         }
     }
 }
