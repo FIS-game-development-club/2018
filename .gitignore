@@ -34,3 +34,4 @@ sysinfo.txt
 *.unitypackage
 *.DS_Store
 .vscode/settings.json
+ProjectSettings/ProjectVersion.txt
