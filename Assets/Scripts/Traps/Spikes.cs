@@ -11,7 +11,7 @@ public class Spikes : MonoBehaviour
         deathmenu = GameObject.Find("SceneManager").GetComponent<Deathmenu>();
     }
 
-    void OnCollisionEnter(Collision collide)
+    void OnTriggerEnter(Collider collide)
 	{
         //kill the player if they touch the spikes
         if (collide.gameObject.name == "CubePlayer") 

@@ -90,7 +90,6 @@ GameObject:
   - component: {fileID: 95589738511986476}
   - component: {fileID: 65731916368406986}
   - component: {fileID: 114136722632875078}
-  - component: {fileID: 65020639630219088}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: Untagged
@@ -294,7 +293,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1292832656160548}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.999218, y: 4.3699374, z: -9.777043}
+  m_LocalPosition: {x: 5.064, y: 1.72, z: -0.704}
   m_LocalScale: {x: 0.09, y: 0.09000002, z: 0.09}
   m_Children:
   - {fileID: 4979915864435692}
@@ -673,18 +672,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1084709219114714}
   m_Mesh: {fileID: 4300006, guid: d85007667587e40c6ba83aaadbf8e2c1, type: 3}
---- !u!65 &65020639630219088
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1292832656160548}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.7, y: 2.2, z: 5.7}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65731916368406986
 BoxCollider:
   m_ObjectHideFlags: 1
