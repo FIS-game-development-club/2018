@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour {
-    public string scene = "scenes/Levelselector";
+    public string scene = "scenes/Menus/Level selector";
     int Levelnumber;
     Highscore score;
 
