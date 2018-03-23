@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour {
     public string scene = "scenes/Levelselector";
-    public int Levelnumber;
+    int Levelnumber;
     Highscore score;
 
 	void Start()
 	{
         score = GameObject.Find("SceneManager").GetComponent<Highscore>();
+        Levelnumber = score.levelnumber;
 	}
 
 	void OnTriggerEnter(Collider c)

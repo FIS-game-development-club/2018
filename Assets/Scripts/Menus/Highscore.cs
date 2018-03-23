@@ -11,6 +11,8 @@ public class Highscore : MonoBehaviour {
 
 	void Update () {
         score += Time.deltaTime;
+        highscore = GameObject.Find("Highscore").GetComponent<Text>();
+        time = GameObject.Find("Score").GetComponent<Text>();
         highscore.text = "Highscore: " + PlayerPrefs.GetFloat("highscore " + levelnumber, 0) + "s";
         if ((Mathf.Round(score * 10) / 10) % 1 == 0){
             time.text = "Score: " + (Mathf.Round(score * 10) / 10) + ".0s";
