@@ -6,7 +6,6 @@ public class cannon : MonoBehaviour {
 
     GameObject player;
     Transform playerP;
-    float delay;
 
     void Start () {
         player = GameObject.Find("CubePlayer");
