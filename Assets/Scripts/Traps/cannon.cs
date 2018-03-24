@@ -6,7 +6,6 @@ public class cannon : MonoBehaviour {
 
     GameObject player;
     Transform playerP;
-
     void Start () {
         player = GameObject.Find("CubePlayer");
         playerP = player.transform;

@@ -283,8 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bdc6b27e9e51470fa5acad5c793c016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: scenes/Level selector
-  Levelnumber: 0
+  scene: scenes/Menus/Level selector
 --- !u!198 &198575992647144938
 ParticleSystem:
   m_ObjectHideFlags: 1

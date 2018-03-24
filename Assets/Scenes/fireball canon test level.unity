@@ -429,6 +429,22 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51ea937175bff4d60b3e1f1fad43bc69, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &748089125 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1630631226673522, guid: 17dee5ed4e2b28b4a9273dbfec0286a7,
+    type: 2}
+  m_PrefabInternal: {fileID: 798496476}
+--- !u!114 &748089126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 748089125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bcc6347b13fd475baa22f5d011e6458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &798496476
 Prefab:
   m_ObjectHideFlags: 0
@@ -1113,7 +1129,6 @@ GameObject:
   - component: {fileID: 1519567453}
   - component: {fileID: 1519567455}
   - component: {fileID: 1519567454}
-  - component: {fileID: 1519567456}
   m_Layer: 0
   m_Name: Fireballs
   m_TagString: Untagged
@@ -3598,12 +3613,12 @@ ParticleSystem:
   CollisionModule:
     enabled: 0
     serializedVersion: 3
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
-    multiplyColliderForceByCollisionAngle: 1
+    multiplyColliderForceByCollisionAngle: 0
     plane0: {fileID: 0}
     plane1: {fileID: 0}
     plane2: {fileID: 0}
@@ -3654,7 +3669,7 @@ ParticleSystem:
     m_Bounce:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3734,7 +3749,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 10000
+    maxKillSpeed: 0
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
@@ -3746,16 +3761,16 @@ ParticleSystem:
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
-    enabled: 0
+    enabled: 1
     collisionShape0: {fileID: 0}
     collisionShape1: {fileID: 0}
     collisionShape2: {fileID: 0}
     collisionShape3: {fileID: 0}
     collisionShape4: {fileID: 0}
     collisionShape5: {fileID: 0}
-    inside: 1
-    outside: 0
-    enter: 0
+    inside: 0
+    outside: 1
+    enter: 1
     exit: 0
     radiusScale: 1
   SubModule:
@@ -4549,17 +4564,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!114 &1519567456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1519567452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cab2d697b07e4180b2951ef2206e83e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1735140135
 GameObject:
   m_ObjectHideFlags: 0
