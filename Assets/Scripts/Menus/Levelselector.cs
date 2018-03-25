@@ -12,7 +12,7 @@ public class Levelselector : MonoBehaviour {
 
     void Start(){
         highscore.text = "Highscore: " + PlayerPrefs.GetFloat("highscore " + levelnumber, 0) + "s";
-        level = "Scenes/Level " + levelnumber;
+        level = "Scenes/Levels/Level " + levelnumber;
     }
 
 	public void to_level () {
