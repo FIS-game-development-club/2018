@@ -13,11 +13,9 @@ public class fireballs : MonoBehaviour {
 
 	private void OnParticleCollision(GameObject collide)
 	{
-        { 
-            if (collide.name == "CubePlayer")
-            {
-                deathmenu.died();
-            }
+        if (collide.name == "CubePlayer")
+        {
+            deathmenu.died();
         }
 	}
 }
