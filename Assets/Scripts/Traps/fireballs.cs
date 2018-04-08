@@ -11,7 +11,7 @@ public class fireballs : MonoBehaviour {
         deathmenu = GameObject.Find("SceneManager").GetComponent<Deathmenu>();
 	}
 
-	private void OnParticleCollision(GameObject collide)
+    void OnParticleCollision(GameObject collide)
 	{
         if (collide.name == "CubePlayer")
         {
