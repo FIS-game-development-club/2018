@@ -11,7 +11,6 @@ public class cannon : MonoBehaviour {
         playerP = player.transform;
 	}
 	
-	// Update is called once per frame
 	void Update () {
         transform.LookAt(playerP);
 	}
