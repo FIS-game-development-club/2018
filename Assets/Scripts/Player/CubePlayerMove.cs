@@ -64,11 +64,18 @@ public class CubePlayerMove : MonoBehaviour
 
     void OnTriggerEnter(Collider c)
     {
+        //checks if the player is colliding with a powerup
+        if (c.gameObject.CompareTag("Powerup"))
+        {
+            //removes the powerup from the scene
+            c.gameObject.SetActive(false);
+        }
+        else{
         //when the player lands start waiting
-        colliders.Add(c);
-        waiting = true;
+            colliders.Add(c);
+            waiting = true;
+        }
     }
-
     void OnTriggerExit(Collider c)
     {
         //stop waiting and reset if the player falls
@@ -79,4 +86,6 @@ public class CubePlayerMove : MonoBehaviour
             wait = 0;
         }
     }
+
+  
 }
