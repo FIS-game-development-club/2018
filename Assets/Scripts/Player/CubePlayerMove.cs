@@ -13,10 +13,13 @@ public class CubePlayerMove : MonoBehaviour
     public float wait = 0f;
     public float jumpDelay = 0.1f;
 
+    public static bool canDoubleJump;
+
     void Start()
     {
         //store the rigidbody for later use
         r = gameObject.GetComponent<Rigidbody>();
+        canDoubleJump = false;
     }
 
     void FixedUpdate()
@@ -67,6 +70,7 @@ public class CubePlayerMove : MonoBehaviour
         //checks if the player is colliding with a powerup
         if (c.gameObject.CompareTag("Powerup"))
         {
+            canDoubleJump = true;
             //removes the powerup from the scene
             c.gameObject.SetActive(false);
         }
