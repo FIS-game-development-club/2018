@@ -11,6 +11,7 @@ public class Deathmenu : MonoBehaviour
     GameObject spawn_point;
     Pausemenu pause_menu;
     EventSystemScript event_system;
+    GameObject[] powerups;
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class Deathmenu : MonoBehaviour
         pause_menu = GameObject.Find("SceneManager").GetComponent<Pausemenu>();
         event_system = gameObject.GetComponent<EventSystemScript>();
         death_menu = GameObject.Find("Deathmenu").GetComponent<Canvas>();
+        powerups = GameObject.FindGameObjectsWithTag("Powerup");
         set_active(false);
     }
 
@@ -40,6 +42,11 @@ public class Deathmenu : MonoBehaviour
         event_system.clear_selection();
         Time.timeScale = 1;
         active = false;
+        foreach (GameObject go in powerups) {
+            go.SetActive(true);
+        }
+
+        //reset powerups here
     }
 
     public void set_active(bool b)
