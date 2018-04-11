@@ -6,13 +6,24 @@ public class spikemove : MonoBehaviour
 {
 	public float time_up;
 	public float time_down;
-	public GameObject up_position;
-	public GameObject down_position;
+	public GameObject position1;
+	public GameObject position2;
 	public float shift_speed;
-
 	float time_elapsed;
-	public bool isUp;
+	bool isUp;
+	public GameObject parent;
+	Spikegroup group;
 
+	void Start(){
+		position1.transform.position = gameObject.transform.position;
+		if(parent != null){
+			group = parent.GetComponent<Spikegroup>();
+			shift_speed = group.shiftspeed;
+			time_up = group.timeup;
+			time_down = group.timedown;
+			position2.transform.position = new Vector3(position2.transform.position.x, group.y, position2.transform.position.z);
+		}
+	}
 	void Update () 
 	{
 		//keep track of time
@@ -39,16 +50,16 @@ public class spikemove : MonoBehaviour
 		if (isUp) {
 			gameObject.transform.position = 
 				Vector3.Lerp (
-					down_position.transform.position,
-					up_position.transform.position,
+					position2.transform.position,
+					position1.transform.position,
 					1 / shift_speed * time_elapsed);
 		} 
 		else 
 		{
 			gameObject.transform.position = 
 				Vector3.Lerp (
-					up_position.transform.position,
-					down_position.transform.position,
+					position1.transform.position,
+					position2.transform.position,
 					1 / shift_speed * time_elapsed);
 		}
 	}
