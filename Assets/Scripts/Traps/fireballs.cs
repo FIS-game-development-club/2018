@@ -18,4 +18,10 @@ public class fireballs : MonoBehaviour {
             deathmenu.died();
         }
 	}
+
+    void Update(){
+        if(deathmenu.active){
+            GameObject.clear(false);
+        }
+    }
 }
