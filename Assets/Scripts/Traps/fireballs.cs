@@ -5,10 +5,12 @@ using UnityEngine;
 public class fireballs : MonoBehaviour {
 
     Deathmenu deathmenu;
+    ParticleSystem particlesystem;
 
  	void Start () {
         
         deathmenu = GameObject.Find("SceneManager").GetComponent<Deathmenu>();
+        particlesystem = gameObject.GetComponent<ParticleSystem>();
 	}
 
     void OnParticleCollision(GameObject collide)
@@ -21,7 +23,7 @@ public class fireballs : MonoBehaviour {
 
     void Update(){
         if(deathmenu.active){
-            GameObject.clear(false);
+            particlesystem.Clear(false);
         }
     }
 }
