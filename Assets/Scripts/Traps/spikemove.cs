@@ -10,16 +10,18 @@ public class spikemove : MonoBehaviour
 	public GameObject position2;
 	public float shift_speed;
 	float time_elapsed;
-	public bool group;
 	bool isUp;
 	public GameObject parent;
-	GameObject height;
+	Spikegroup group;
 
 	void Start(){
-		height = (parent.transform.Find("Position 2")).gameObject;
 		position1.transform.position = gameObject.transform.position;
-		if (group){
-			position2.transform.position = new Vector3((0.0f, height.transform.position.y, 0.0f);
+		if(parent != null){
+			group = parent.GetComponent<Spikegroup>();
+			shift_speed = group.shiftspeed;
+			time_up = group.timeup;
+			time_down = group.timedown;
+			position2.transform.position = new Vector3(position2.transform.position.x, group.y, position2.transform.position.z);
 		}
 	}
 	void Update () 

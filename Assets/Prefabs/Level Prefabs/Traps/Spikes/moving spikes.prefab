@@ -834,3 +834,4 @@ MonoBehaviour:
   position1: {fileID: 1904320310832176}
   position2: {fileID: 1152281871996024}
   shift_speed: 0.25
+  parent: {fileID: 0}
