@@ -12,11 +12,14 @@ public class spikemove : MonoBehaviour
 	float time_elapsed;
 	public bool group;
 	bool isUp;
+	public GameObject parent;
+	GameObject height;
 
 	void Start(){
+		height = (parent.transform.Find("Position 2")).gameObject;
 		position1.transform.position = gameObject.transform.position;
 		if (group){
-			
+			position2.transform.position = new Vector3((0.0f, height.transform.position.y, 0.0f);
 		}
 	}
 	void Update () 
