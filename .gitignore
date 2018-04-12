@@ -33,5 +33,5 @@ sysinfo.txt
 *.apk
 *.unitypackage
 *.DS_Store
-.vscode/settings.json
-ProjectSettings/ProjectVersion.txt
+*.vscode
+*ProjectSettings/ProjectVersion.txt
