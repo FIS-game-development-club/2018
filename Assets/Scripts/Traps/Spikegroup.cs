@@ -8,8 +8,8 @@ public class Spikegroup : MonoBehaviour {
 	public float shiftspeed;
 	public float timeup;
 	public float timedown;
-	public float y;
-	void Start () {
-		y = Position2.transform.position.y;
+	public float Y;
+	void Awake () {
+		Y = Position2.transform.localPosition.y;
 	}
 }
