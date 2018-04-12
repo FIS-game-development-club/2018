@@ -21,7 +21,7 @@ public class spikemove : MonoBehaviour
 			shift_speed = group.shiftspeed;
 			time_up = group.timeup;
 			time_down = group.timedown;
-			position2.transform.position = new Vector3(position2.transform.position.x, group.y, position2.transform.position.z);
+			position2.transform.localPosition = new Vector3(position2.transform.localPosition.x, group.Y, position2.transform.localPosition.z);
 		}
 	}
 	void Update () 
