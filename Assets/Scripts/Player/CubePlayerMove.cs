@@ -15,11 +15,18 @@ public class CubePlayerMove : MonoBehaviour
 
     public static bool canDoubleJump;
 
+    private bool isDoubleJumping;
+
+    //private bool inAir;
+
+
     void Start()
     {
         //store the rigidbody for later use
         r = gameObject.GetComponent<Rigidbody>();
         canDoubleJump = false;
+        isDoubleJumping = false;
+        //inAir = false;
     }
 
     void FixedUpdate()
@@ -54,13 +61,24 @@ public class CubePlayerMove : MonoBehaviour
             gameObject.transform.Rotate(Vector3.up);
         }
 
+        
         //only jump if the player has waited longer than jump delay
-        if (Input.GetKey(KeyCode.Space) && wait >= jumpDelay)
+        
+        if (Input.GetButtonDown("Jump") && wait >= jumpDelay)
         {
             wait = 0;
             waiting = false;
             r.AddForce(new Vector3(0, jump, 0));
         }
+        //checking if the player wants to double jump and hasn't double jumped yet
+        if (Input.GetButtonDown("Jump") && canDoubleJump == true && isDoubleJumping == false) {
+            //making them jump
+            r.AddForce(new Vector3(0,jump,0));
+            isDoubleJumping = true;
+            //inAir = true;
+        
+        }
+        
     }
 
     List<Collider> colliders = new List<Collider>();
@@ -78,6 +96,8 @@ public class CubePlayerMove : MonoBehaviour
         //when the player lands start waiting
             colliders.Add(c);
             waiting = true;
+            isDoubleJumping = false;
+            //inAir = false;
         }
     }
     void OnTriggerExit(Collider c)
