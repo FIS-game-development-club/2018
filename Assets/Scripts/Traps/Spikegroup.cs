@@ -9,7 +9,7 @@ public class Spikegroup : MonoBehaviour {
 	public float timeup;
 	public float timedown;
 	public float y;
-	void Awake () {
+	void Start () {
 		y = Position2.transform.position.y;
 	}
 }
