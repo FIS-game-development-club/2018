@@ -88,10 +88,15 @@ public class CubePlayerMove : MonoBehaviour
         //checks if the player is colliding with a powerup
         if (c.gameObject.CompareTag("Powerup"))
         {
-            canDoubleJump = true;
             //removes the powerup from the scene
             c.gameObject.SetActive(false);
-            doubletime = Time.time;
+            if(c.gameObject.name == "bigguy"){
+                gameObject.transform.localScale += new Vector3(1.0f, 1.0f, 1.0f);
+            }
+            if(c.gameObject.name == "doublejump"){
+                canDoubleJump = true;
+                doubletime = Time.time;
+            }
         }
         else{
         //when the player lands start waiting
