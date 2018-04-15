@@ -14,12 +14,12 @@ public class CubePlayerMove : MonoBehaviour
     public float jumpDelay = 0.1f;
 
     public static bool canDoubleJump;
-
+   //private bool inAir;
     private bool isDoubleJumping;
-
-    //private bool inAir;
-
-
+    //holds the time at which doublejump was last activated
+    private float doubletime;
+    //holds the amount of time after which doublejump needs to be refreshed
+    public float DoublejumpActiveDuration;
     void Start()
     {
         //store the rigidbody for later use
@@ -91,6 +91,7 @@ public class CubePlayerMove : MonoBehaviour
             canDoubleJump = true;
             //removes the powerup from the scene
             c.gameObject.SetActive(false);
+            doubletime = Time.time;
         }
         else{
         //when the player lands start waiting
@@ -98,6 +99,10 @@ public class CubePlayerMove : MonoBehaviour
             waiting = true;
             isDoubleJumping = false;
             //inAir = false;
+            //checks to see if doublejump should be deactivated because it has been active for to long
+            if (Time.time - doubletime > DoublejumpActiveDuration){
+                canDoubleJump = false;
+            }
         }
     }
     void OnTriggerExit(Collider c)
