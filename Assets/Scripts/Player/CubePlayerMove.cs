@@ -14,7 +14,7 @@ public class CubePlayerMove : MonoBehaviour
     public float jumpDelay = 0.1f;
 
     public static bool canDoubleJump;
-   //private bool inAir;
+
     private bool isDoubleJumping;
     //holds the time at which doublejump was last activated
     private float doubletime;
@@ -38,7 +38,8 @@ public class CubePlayerMove : MonoBehaviour
         //player movement (only when key is pressed)
         if (Input.GetKey(KeyCode.D))
         {
-            gameObject.transform.Translate(speed * Time.deltaTime, 0, 0);
+            //gameObject.transform.Translate(speed * Time.deltaTime, 0, 0);
+            r.AddForce(speed * Time.deltaTime, 0, 0, ForceMode.Acceleration);
         }
         if (Input.GetKey(KeyCode.A))
         {
