@@ -7358,7 +7358,7 @@ MonoBehaviour:
   shiftspeed: 0.25
   timeup: 5
   timedown: 2
-  y: 0
+  Y: 0
 --- !u!114 &114435847819385774
 MonoBehaviour:
   m_ObjectHideFlags: 1
