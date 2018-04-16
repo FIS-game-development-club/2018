@@ -614,6 +614,10 @@ Prefab:
       propertyPath: m_TagString
       value: Powerup
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fb6d68cf6a50e4bbfbe2f93fb0757898, type: 3}
+      propertyPath: m_Name
+      value: bigguy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb6d68cf6a50e4bbfbe2f93fb0757898, type: 3}
   m_IsPrefabParent: 0
@@ -657,10 +661,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1033169851}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: fb6d68cf6a50e4bbfbe2f93fb0757898, type: 3}

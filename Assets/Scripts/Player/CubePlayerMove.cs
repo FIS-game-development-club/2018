@@ -18,8 +18,11 @@ public class CubePlayerMove : MonoBehaviour
     private bool isDoubleJumping;
     //holds the time at which doublejump was last activated
     private float doubletime;
+    //holds the time at which bigguy powerup was last activated
+    private float bigtime;
     //holds the amount of time after which a powerup needs to be refreshed
     public float PowerupActiveDuration;
+    private bool bigactive;
     void Start()
     {
         //store the rigidbody for later use
@@ -108,6 +111,11 @@ public class CubePlayerMove : MonoBehaviour
             //checks to see if doublejump should be deactivated because it has been active for to long
             if (Time.time - doubletime > PowerupActiveDuration){
                 canDoubleJump = false;
+            }
+            if(Time.time - bigtime > PowerupActiveDuration){
+                if(bigactive){
+                    bigactive = false;
+                }
             }
         }
     }
