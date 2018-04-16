@@ -18,8 +18,8 @@ public class CubePlayerMove : MonoBehaviour
     private bool isDoubleJumping;
     //holds the time at which doublejump was last activated
     private float doubletime;
-    //holds the amount of time after which doublejump needs to be refreshed
-    public float DoublejumpActiveDuration;
+    //holds the amount of time after which a powerup needs to be refreshed
+    public float PowerupActiveDuration;
     void Start()
     {
         //store the rigidbody for later use
@@ -91,7 +91,7 @@ public class CubePlayerMove : MonoBehaviour
             //removes the powerup from the scene
             c.gameObject.SetActive(false);
             if(c.gameObject.name == "bigguy"){
-                gameObject.transform.localScale += new Vector3(1.0f, 1.0f, 1.0f);
+                gameObject.transform.localScale += new Vector3(2.0f, 2.0f, 2.0f);
             }
             if(c.gameObject.name == "doublejump"){
                 canDoubleJump = true;
