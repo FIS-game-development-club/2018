@@ -105,7 +105,7 @@ public class CubePlayerMove : MonoBehaviour
             isDoubleJumping = false;
             //inAir = false;
             //checks to see if doublejump should be deactivated because it has been active for to long
-            if (Time.time - doubletime > DoublejumpActiveDuration){
+            if (Time.time - doubletime > PowerupActiveDuration){
                 canDoubleJump = false;
             }
         }
