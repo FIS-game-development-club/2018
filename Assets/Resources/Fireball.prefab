@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 198556960301542454}
   - component: {fileID: 114407725216251816}
   - component: {fileID: 199509775508178908}
-  - component: {fileID: 135857415313805278}
   - component: {fileID: 135382152846150314}
   m_Layer: 0
   m_Name: Fireball
@@ -38,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1387053416566656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.403, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -65,18 +64,6 @@ SphereCollider:
   m_GameObject: {fileID: 1387053416566656}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.12875056
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &135857415313805278
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1387053416566656}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.12875056
@@ -141,7 +128,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1588085345
+  randomSeed: 1764140828
   InitialModule:
     serializedVersion: 3
     enabled: 1
