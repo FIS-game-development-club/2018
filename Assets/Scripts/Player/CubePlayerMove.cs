@@ -14,7 +14,7 @@ public class CubePlayerMove : MonoBehaviour
     public float jumpDelay = 0.1f;
 
     public static bool canDoubleJump;
-
+    //holds if the player is double jumping
     private bool isDoubleJumping;
     //holds the time at which doublejump was last activated
     private float doubletime;
@@ -41,8 +41,7 @@ public class CubePlayerMove : MonoBehaviour
         //player movement (only when key is pressed)
         if (Input.GetKey(KeyCode.D))
         {
-            //gameObject.transform.Translate(speed * Time.deltaTime, 0, 0);
-            r.AddForce(speed * Time.deltaTime, 0, 0, ForceMode.Acceleration);
+            gameObject.transform.Translate(speed * Time.deltaTime, 0, 0);
         }
         if (Input.GetKey(KeyCode.A))
         {
@@ -94,14 +93,17 @@ public class CubePlayerMove : MonoBehaviour
         {
             //removes the powerup from the scene
             c.gameObject.SetActive(false);
+            //checks if the powerup should make the player bigger
             if(c.gameObject.name == "bigguy"){
                 gameObject.transform.localScale += new Vector3(2.0f, 2.0f, 2.0f);
             }
+            //cheks if the powerup is the doublejump powerup
             if(c.gameObject.name == "doublejump"){
                 canDoubleJump = true;
                 doubletime = Time.time;
             }
         }
+
         else{
         //when the player lands start waiting
             colliders.Add(c);
