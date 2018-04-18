@@ -7,7 +7,7 @@ public class CubePlayerMove : MonoBehaviour
 
     //set player properties
     public float speed;
-    public float jump;
+    public static float jump;
     Rigidbody r;
     bool waiting = false;
     public float wait = 0f;
@@ -23,6 +23,9 @@ public class CubePlayerMove : MonoBehaviour
     //holds the amount of time after which a powerup needs to be refreshed
     public float PowerupActiveDuration;
     private bool bigactive;
+
+    private Vector3 size;
+    private Vector3 currentSize;
     void Start()
     {
         //store the rigidbody for later use
@@ -30,6 +33,7 @@ public class CubePlayerMove : MonoBehaviour
         canDoubleJump = false;
         isDoubleJumping = false;
         //inAir = false;
+        size.Set(2.0f,2.0f,2.0f);
     }
 
     void FixedUpdate()
@@ -74,11 +78,10 @@ public class CubePlayerMove : MonoBehaviour
             r.AddForce(new Vector3(0, jump, 0));
         }
         //checking if the player wants to double jump and hasn't double jumped yet
-        if (Input.GetButtonDown("Jump") && canDoubleJump == true && isDoubleJumping == false) {
+        if (Input.GetButtonDown("Jump") && canDoubleJump && isDoubleJumping == false) {
             //making them jump
             r.AddForce(new Vector3(0,jump,0));
             isDoubleJumping = true;
-            //inAir = true;
         
         }
         
@@ -95,7 +98,7 @@ public class CubePlayerMove : MonoBehaviour
             c.gameObject.SetActive(false);
             //checks if the powerup should make the player bigger
             if(c.gameObject.name == "bigguy"){
-                gameObject.transform.localScale += new Vector3(2.0f, 2.0f, 2.0f);
+                gameObject.transform.localScale += size;
             }
             //cheks if the powerup is the doublejump powerup
             if(c.gameObject.name == "doublejump"){
