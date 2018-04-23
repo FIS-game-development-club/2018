@@ -7,7 +7,7 @@ public class CubePlayerMove : MonoBehaviour
 
     //set player properties
     public float speed;
-    public static float jump;
+    public float jump;
     Rigidbody r;
     bool waiting = false;
     public float wait = 0f;
@@ -137,3 +137,5 @@ public class CubePlayerMove : MonoBehaviour
 
   
 }
+
+
