@@ -10,6 +10,7 @@ public class powerup_manager : MonoBehaviour {
 		deathmenu = GameObject.FindWithTag("Scenemanager").GetComponent<Deathmenu>();
 	}
 
+
 	void Update () {
 		if (deathmenu.active){
 			foreach(GameObject powerup in powerups){
