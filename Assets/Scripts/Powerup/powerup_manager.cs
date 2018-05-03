@@ -8,6 +8,7 @@ public class powerup_manager : MonoBehaviour {
 	GameObject[] powerups;
 	void Start () {
 		deathmenu = GameObject.FindWithTag("Scenemanager").GetComponent<Deathmenu>();
+		powerups = GameObject.FindGameObjectsWithTag("Powerup");
 	}
 
 

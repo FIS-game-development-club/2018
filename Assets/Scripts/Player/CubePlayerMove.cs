@@ -99,6 +99,9 @@ public class CubePlayerMove : MonoBehaviour
             //checks if the powerup should make the player bigger
             if(c.gameObject.name == "bigguy"){
                 gameObject.transform.localScale += size;
+                bigtime = Time.time;
+                bigactive = true;
+                jump *= 2.5f;
             }
             //cheks if the powerup is the doublejump powerup
             if(c.gameObject.name == "doublejump"){
@@ -120,6 +123,8 @@ public class CubePlayerMove : MonoBehaviour
             if(Time.time - bigtime > PowerupActiveDuration){
                 if(bigactive){
                     bigactive = false;
+                    gameObject.transform.localScale -= size;
+                    jump *= 0.4f;
                 }
             }
         }
