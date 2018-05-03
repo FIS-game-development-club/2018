@@ -26,7 +26,7 @@ public class Checkpoint : MonoBehaviour
                 usable = false;
                 checkpointGot = true;
                 
-1            }
+            }
         }
     }
 }
