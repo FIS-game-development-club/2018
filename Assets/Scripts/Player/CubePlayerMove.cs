@@ -13,10 +13,27 @@ public class CubePlayerMove : MonoBehaviour
     public float wait = 0f;
     public float jumpDelay = 0.1f;
 
+    public static bool canDoubleJump;
+    //holds if the player is double jumping
+    private bool isDoubleJumping;
+    //holds the time at which doublejump was last activated
+    private float doubletime;
+    //holds the time at which bigguy powerup was last activated
+    private float bigtime;
+    //holds the amount of time after which a powerup needs to be refreshed
+    public float PowerupActiveDuration;
+    private bool bigactive;
+
+    private Vector3 size;
+    private Vector3 currentSize;
     void Start()
     {
         //store the rigidbody for later use
         r = gameObject.GetComponent<Rigidbody>();
+        canDoubleJump = false;
+        isDoubleJumping = false;
+        //inAir = false;
+        size.Set(2.0f,2.0f,2.0f);
     }
 
     void FixedUpdate()
@@ -51,24 +68,62 @@ public class CubePlayerMove : MonoBehaviour
             gameObject.transform.Rotate(Vector3.up);
         }
 
+        
         //only jump if the player has waited longer than jump delay
-        if (Input.GetKey(KeyCode.Space) && wait >= jumpDelay)
+        
+        if (Input.GetButtonDown("Jump") && wait >= jumpDelay)
         {
             wait = 0;
             waiting = false;
             r.AddForce(new Vector3(0, jump, 0));
         }
+        //checking if the player wants to double jump and hasn't double jumped yet
+        if (Input.GetButtonDown("Jump") && canDoubleJump && isDoubleJumping == false) {
+            //making them jump
+            r.AddForce(new Vector3(0,jump,0));
+            isDoubleJumping = true;
+        
+        }
+        
     }
 
     List<Collider> colliders = new List<Collider>();
 
     void OnTriggerEnter(Collider c)
     {
-        //when the player lands start waiting
-        colliders.Add(c);
-        waiting = true;
-    }
+        //checks if the player is colliding with a powerup
+        if (c.gameObject.CompareTag("Powerup"))
+        {
+            //removes the powerup from the scene
+            c.gameObject.SetActive(false);
+            //checks if the powerup should make the player bigger
+            if(c.gameObject.name == "bigguy"){
+                gameObject.transform.localScale += size;
+            }
+            //cheks if the powerup is the doublejump powerup
+            if(c.gameObject.name == "doublejump"){
+                canDoubleJump = true;
+                doubletime = Time.time;
+            }
+        }
 
+        else{
+        //when the player lands start waiting
+            colliders.Add(c);
+            waiting = true;
+            isDoubleJumping = false;
+            //inAir = false;
+            //checks to see if doublejump should be deactivated because it has been active for to long
+            if (Time.time - doubletime > PowerupActiveDuration){
+                canDoubleJump = false;
+            }
+            if(Time.time - bigtime > PowerupActiveDuration){
+                if(bigactive){
+                    bigactive = false;
+                }
+            }
+        }
+    }
     void OnTriggerExit(Collider c)
     {
         //stop waiting and reset if the player falls
@@ -79,4 +134,8 @@ public class CubePlayerMove : MonoBehaviour
             wait = 0;
         }
     }
+
+  
 }
+
+
