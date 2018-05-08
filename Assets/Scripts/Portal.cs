@@ -18,9 +18,6 @@ public class Portal : MonoBehaviour {
     {
         if (c.gameObject.name == "CubePlayer")
         {
-            if (PlayerPrefs.GetInt("Levelnumber", 1) <= Levelnumber){
-                PlayerPrefs.SetInt("Levelnumber", Levelnumber + 1);
-            }
             if ((score.score < PlayerPrefs.GetFloat("highscore " + Levelnumber, 0)) ||
                 (PlayerPrefs.GetFloat("highscore " + Levelnumber, 0) <= 0)){
                 PlayerPrefs.SetFloat("highscore " + Levelnumber, Mathf.Round(score.score * 10) / 10);
