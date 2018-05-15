@@ -4,16 +4,15 @@ using UnityEngine;
 using TMPro;
 
 public class Reset : MonoBehaviour {
-    TextMeshPro text;
+    public TextMeshPro textObject;
 
 	void Awake() {
-		text = transform.Find("Text").gameObject.GetComponent<TextMeshPro>();
-        text.color = Color.white;
+		textObject = transform.Find("Text").gameObject.GetComponent<TextMeshPro>();
 	}
 
     public void reset()
     {
         PlayerPrefs.DeleteAll();
-        text.color = Color.green;
+        textObject.color = Color.green;
     }
 }
