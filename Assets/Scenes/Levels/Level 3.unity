@@ -856,19 +856,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4093178780773734, guid: a753d5e27e8224c4a80abc9501b575e4, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 20.06
+      value: 20.07
       objectReference: {fileID: 0}
     - target: {fileID: 4093178780773734, guid: a753d5e27e8224c4a80abc9501b575e4, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4093178780773734, guid: a753d5e27e8224c4a80abc9501b575e4, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4093178780773734, guid: a753d5e27e8224c4a80abc9501b575e4, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4093178780773734, guid: a753d5e27e8224c4a80abc9501b575e4, type: 2}
       propertyPath: m_LocalRotation.w
@@ -881,6 +881,18 @@ Prefab:
     - target: {fileID: 1235754365179218, guid: a753d5e27e8224c4a80abc9501b575e4, type: 2}
       propertyPath: m_Name
       value: 3x3 Moving Spikes (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093178780773734, guid: a753d5e27e8224c4a80abc9501b575e4, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093178780773734, guid: a753d5e27e8224c4a80abc9501b575e4, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093178780773734, guid: a753d5e27e8224c4a80abc9501b575e4, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a753d5e27e8224c4a80abc9501b575e4, type: 2}
