@@ -16,10 +16,7 @@ public class Levelselector : MonoBehaviour {
     }
 
 	public void to_level () {
-    
-        if (PlayerPrefs.GetFloat("Levelnumber", 1) >= levelnumber)
-        {
+
             SceneManager.LoadScene(level);
-        }
 	}
 }
